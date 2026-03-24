@@ -18,8 +18,6 @@ WTWR is an app that provides up to date weather information and clothing recomme
 
 This web-page is deployed to Github pages.
 
-- [Deployment Link](https://t-davenport404.github.io/se_project_spots)
-
 ## Plan on improving the project
 
 - Create logins for users. Creation of individual profiles with settings.
