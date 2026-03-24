@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 171px;
+  padding-bottom: 24px;
+}
+
+.footer__dev-name {
+  margin: 0;
+}
+
+.footer__year {
+  margin: 0 0 0 auto;
+}
