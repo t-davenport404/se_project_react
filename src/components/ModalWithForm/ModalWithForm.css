@@ -9,7 +9,11 @@
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  font-family: CabinetGrotesk, Arial, Helvetica, sans-serif;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .modal_opened {
@@ -19,7 +23,11 @@
 
 .modal__title {
   margin: 0;
-  font-family: CabinetGrotesk, Arial, Helvetica, sans-serif;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 16px;
@@ -30,7 +38,11 @@
 .modal__label {
   margin-top: 24px;
   margin-bottom: 3px;
-  font-family: CabinetGrotesk, Arial, Helvetica, sans-serif;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 16px;
@@ -60,7 +72,7 @@
   position: relative;
   padding: 28px 28px 36px;
   max-width: 496px;
-  height: 436px;
+  max-height: 436px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 20px;
@@ -91,19 +103,36 @@
 
 .modal__legend {
   margin-bottom: 4px;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .modal__radio-input {
   margin-right: 8px;
   gap: 8px;
   cursor: pointer;
+  border: 1px solid #000000;
+  accent-color: #000000;
 }
 
 .modal__label-type-radio {
   margin-top: 8px;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .modal__submit {
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
   width: 124px;
   height: 36px;
   background-color: #000000;

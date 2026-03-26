@@ -9,11 +9,24 @@
 }
 
 .header__date-and-location {
-  font-family: CabinetGrotesk, Arial, Helvetica, sans-serif;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: bold;
   margin: 0;
 }
+
 .header__add-clothes-btn {
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: bold;
   margin: 0 20px 0 auto;
+  background: transparent;
   border: none;
   cursor: pointer;
 }
@@ -26,4 +39,10 @@
 
 .header__user-name {
   margin: 0;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: bold;
 }
