@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import { coordinates, APIkey } from "../../utils/constants";
+import { coordinates, apikey } from "../../utils/constants";
 import Header from "../Header/Header";
 import {} from "../../utils/constants";
 import Main from "../Main/Main";
@@ -11,7 +11,7 @@ import Footer from "../Footer/Footer";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import ItemModal from "../ItemModal/ItemModal";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
-import CurrentTempUnitContext from "../../contexts/CurrentTempUnitContext";
+import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 import { addItem, getItems, removeItem } from "../../utils/api";
 
 function App() {
@@ -26,10 +26,10 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [clothingItems, setClothingItems] = useState([]);
-  const [currentTempUnit, setCurrentTempUnit] = useState("F");
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
   const handleToggleSwitchChange = () => {
-    setCurrentTempUnit(currentTempUnit === "F" ? "C" : "F");
+    setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
   };
 
   const handleCardClick = (card) => {
@@ -70,7 +70,7 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coordinates, APIkey)
+    getWeather(coordinates, apikey)
       .then((data) => {
         const filteredData = filterWeatherData(data);
         setWeatherData(filteredData);
@@ -83,8 +83,8 @@ function App() {
   }, []);
 
   return (
-    <CurrentTempUnitContext.Provider
-      value={{ currentTempUnit, handleToggleSwitchChange }}
+    <CurrentTemperatureUnitContext.Provider
+      value={{ currentTemperatureUnit, handleToggleSwitchChange }}
     >
       <div className="page">
         <div className="page__content">
@@ -106,6 +106,7 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothingItems={clothingItems}
+                  handleAddClick={handleAddClick}
                 />
               }
             />
@@ -126,7 +127,7 @@ function App() {
           />
         </div>
       </div>
-    </CurrentTempUnitContext.Provider>
+    </CurrentTemperatureUnitContext.Provider>
   );
 }
 
