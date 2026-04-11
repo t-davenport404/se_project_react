@@ -11,7 +11,7 @@
 
 .modal__image {
   width: 100%;
-  min-height: 498px;
+  max-width: 498px;
   top: 106px;
   left: 471px;
   margin: 0;
@@ -30,16 +30,35 @@
 }
 
 .modal__footer {
-  margin: 20px auto 32px 32px;
+  margin: 20px 33.56px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.modal__footer__text_items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .modal__caption {
   font-size: 20px;
   font-weight: bold;
+  margin: 0;
 }
 
 .modal__weather {
   font-size: 20px;
   font-weight: bold;
   margin: 0 0 32px 0;
+}
+
+.modal__delete_btn {
+  color: #ff4d00;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
 }

@@ -1,0 +1,46 @@
+.clothes__section {
+  width: 1015px;
+  min-height: 676px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.clothes__section__row {
+  display: flex;
+}
+
+.clothes_section__text {
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.clothes__section__add_btn {
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: bold;
+  margin: 0 20px 0 20px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: #00000099;
+}
+
+.clothes__section__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 325px);
+  grid-auto-rows: 328px;
+  gap: 20px;
+  justify-content: center; /* or start if you want left-aligned */
+  padding: 0;
+  margin: 0;
+}

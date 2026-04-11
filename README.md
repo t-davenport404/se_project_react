@@ -19,9 +19,16 @@ WTWR is an app that provides up to date weather information and clothing recomme
 This web-page is deployed to Github pages.
 [https://t-davenport404.github.io/se_project_react/]
 
+## Project Pitch Video
+
+Check out [this video](https://drive.google.com/file/d/1rni0zdr70SEQjnaqco1CSXCeVXGnVL1I/view?usp=drive_link), where I describe my
+project and some challenges I faced while building it.
+
 ## Plan on improving the project
 
 - Create logins for users. Creation of individual profiles with settings.
 - Allow users to upload pictures of their own clothing set within categories.
 - Possibly create a generated image that shows the combination of clothing on a model image. (possibly 3D)
 - Allow users to upload images of themselves after they have selected their wardrobe, and share it to social media
+
+https://drive.google.com/file/d/1rni0zdr70SEQjnaqco1CSXCeVXGnVL1I/view?usp=sharing
