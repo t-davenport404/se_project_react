@@ -9,13 +9,22 @@ export const handleServerResponse = (res) => {
 };
 
 export const getItems = () => {
-  return fetch(`${baseUrl}/items`, { headers }).then(handleServerResponse);
+  return fetch(`${baseUrl}/items`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+    },
+  }).then(handleServerResponse);
 };
 
 export const addItem = ({ name, imageUrl, weather }) => {
   return fetch(`${baseUrl}/items`, {
     method: "POST",
-    headers,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+    },
     body: JSON.stringify({
       name,
       imageUrl,
@@ -27,6 +36,9 @@ export const addItem = ({ name, imageUrl, weather }) => {
 export const removeItem = (itemId) => {
   return fetch(`${baseUrl}/items/${itemId}`, {
     method: "DELETE",
-    headers,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+    },
   }).then(handleServerResponse);
 };

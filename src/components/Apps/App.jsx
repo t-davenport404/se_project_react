@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { coordinates, apikey } from "../../utils/constants";
 import Header from "../Header/Header";
-import {} from "../../utils/constants";
 import Main from "../Main/Main";
 import Profile from "../Profile/Profile";
 import Footer from "../Footer/Footer";
@@ -70,16 +69,49 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coordinates, apikey)
-      .then((data) => {
-        const filteredData = filterWeatherData(data);
-        setWeatherData(filteredData);
-      })
-      .catch(console.error);
+    const loadWeather = (coords) => {
+      getWeather(coords, apikey)
+        .then((data) => {
+          const filteredData = filterWeatherData(data);
+          setWeatherData(filteredData);
+        })
+        .catch(console.error);
+    };
 
-    getItems().then((data) => {
-      setClothingItems([...data].reverse());
-    });
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        ({ coords }) => {
+          loadWeather({
+            latitude: coords.latitude,
+            longitude: coords.longitude,
+          });
+        },
+        (error) => {
+          console.warn(
+            "Geolocation unavailable, using default weather location:",
+            error,
+          );
+          loadWeather(coordinates);
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 60000,
+        },
+      );
+    } else {
+      loadWeather(coordinates);
+    }
+
+    getItems()
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setClothingItems([...data].reverse());
+        }
+      })
+      .catch((err) => {
+        console.error("Error fetching items:", err);
+      });
   }, []);
 
   return (
