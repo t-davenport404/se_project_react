@@ -3,9 +3,18 @@
 }
 .sidebar__profile {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 16px;
+}
+
+.sidebar__navigation {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
 }
 
 .sidebar__avatar {
@@ -26,4 +35,34 @@
     sans-serif;
   font-weight: bold;
   font-size: 20px;
+}
+
+.sidebar__edit-btn {
+  width: 171px;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar__logout-btn {
+  white-space: nowrap;
+  width: auto;
+  font-family:
+    Cabinet Grotesk,
+    Arial,
+    sans-serif;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
 }
