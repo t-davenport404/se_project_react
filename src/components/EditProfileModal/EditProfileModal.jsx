@@ -58,7 +58,7 @@ const EditProfileModal = ({ isOpen, handleUpdateUser, onClose }) => {
           id="edit-avatar"
           placeholder="Avatar URL"
           required
-          value={values.imageUrl}
+          value={values.avatar}
           onChange={handleChange}
         />
       </label>

@@ -19,12 +19,6 @@ function ItemCard({ item, onCardClick, onCardLike }) {
     onCardLike({ id: item._id, isLiked: isCurrentlyLiked });
   };
 
-  //const isLiked = item.likes.some((id) => id === currentUser._id);
-
-  // const itemLikeButtonClassName = `card__like-btn ${
-  //   isLiked ? "card__like-btn_active" : ""
-  // }`;
-
   return (
     <li className="card">
       <div className="card__header">

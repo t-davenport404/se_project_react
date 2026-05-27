@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import "./App.css";
@@ -49,6 +49,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
+  const navigate = useNavigate();
 
   const handleToggleSwitchChange = () => {
     setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
@@ -86,6 +87,7 @@ function App() {
             .then((userData) => {
               setCurrentUser(userData);
               setIsLoggedIn(true);
+              navigate("/");
               closeActiveModal();
             })
             .catch(console.error);
@@ -283,12 +285,14 @@ function App() {
               isOpen={activeModal === "registration"}
               handleRegister={handleRegister}
               onClose={closeActiveModal}
+              handleLoginClick={() => setActiveModal("login")}
             />
 
             <LoginModal
               isOpen={activeModal === "login"}
               handleLogin={handleLogin}
               onClose={closeActiveModal}
+              handleSignUpClick={() => setActiveModal("registration")}
             />
 
             <EditProfileModal
