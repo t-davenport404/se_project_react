@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+export const baseUrl = "http://localhost:3001";
 
 export const handleServerResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
@@ -18,7 +18,7 @@ export const addItem = ({ name, imageUrl, weather }, token) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       name,

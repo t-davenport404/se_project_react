@@ -10,8 +10,8 @@
 }
 
 .modal__image {
-  width: 100%;
-  max-width: 498px;
+  width: 498px;
+  height: 498px;
   top: 106px;
   left: 471px;
   margin: 0;
