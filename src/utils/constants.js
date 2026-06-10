@@ -76,4 +76,6 @@ export const coordinates = {
   longitude: -84.41692398046567,
 };
 
+export const BASE_URL = "https://api.what2wear.tenspot.net";
+
 export const apikey = "fa2ca66c2e58d56f7108b18102bb85ff";
