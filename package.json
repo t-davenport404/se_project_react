@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run build && scp -r ./dist/* tonydraconis@104.196.210.8:/home/tonydraconis/frontend"
+    "deploy": "npm run build && scp -r ./dist/* tonydraconis@what2wear.tenspot.net:/home/tonydraconis/frontend"
   },
   "dependencies": {
     "react": "^18.3.1",
