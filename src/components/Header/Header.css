@@ -6,6 +6,7 @@
 
 .header__logo {
   margin-right: 24px;
+  cursor: pointer;
 }
 
 .header__date-and-location {
@@ -34,6 +35,7 @@
   margin-left: 20px;
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .header__login-btn {
@@ -43,6 +45,7 @@
   margin-left: 20px;
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .header__link {
